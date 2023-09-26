@@ -13,12 +13,12 @@ fun main() {
     println(contaJuli.titular)
     println(contaJuli.numero)
     println(contaJuli.saldo)
-    contaJuli.deposita(contaJuli, 50.0)
+    contaJuli.deposita(50.0)
 
     println(contaJoe.titular)
     println(contaJoe.numero)
     println(contaJoe.saldo)
-    contaJoe.deposita(contaJoe, 70.0)
+    contaJoe.deposita(70.0)
 }
 
 class Conta {
@@ -26,10 +26,10 @@ class Conta {
     var numero = 0
     var saldo = 0.0
 
-    fun deposita(conta: Conta, valor: Double) {
-        println("Depositando na conta do ${conta.titular}")
-        conta.saldo += valor
-        println(conta.saldo)
+    fun deposita(valor: Double) {
+        println("Depositando na conta do ${titular}")
+        this.saldo += valor
+        println(saldo)
     }
 
 }
