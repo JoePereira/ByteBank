@@ -16,7 +16,6 @@ fun main() {
 
     println(contaJoe.titular)
     println(contaJoe.numero)
-    println(contaJoe.saldo)
 }
 
 class Conta {
