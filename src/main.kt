@@ -19,6 +19,7 @@ fun main() {
     println(contaJoe.numero)
     println(contaJoe.saldo)
     contaJoe.deposita(70.0)
+    contaJoe.saca(50.0)
 }
 
 class Conta {
@@ -31,6 +32,17 @@ class Conta {
         this.saldo += valor
         println(saldo)
     }
+
+    fun saca(valor: Double) {
+        if(saldo >= valor){
+            println("Sacando $valor da conta do ${titular}")
+            this.saldo -= valor
+            println(saldo)
+        } else{
+            println("Saldo insuficiente")
+        }
+    }
+
 
 }
 
